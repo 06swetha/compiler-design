@@ -1,0 +1,14 @@
+%{
+%}
+%%
+"int"|"float"|"str"|"break"|"continue"|"switch"|"if"|"else"|"else if"|"void"|"while"|"do while"|"char"|"return"|"printf"|"scanf" {printf("\n given input is keyword\n");}
+.+ {printf("\n identifier\n");}
+%%
+int yywrap(void){}
+int main()
+{
+printf("\n enter value:");
+yylex();
+printf("\n");
+return 0;
+}
