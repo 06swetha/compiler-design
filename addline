@@ -1,0 +1,17 @@
+# compiler-design
+%{
+int line_number=1;
+%}
+line .*\n
+%%
+{line} }printf("%s",line_number++,yytext);}
+%%
+int yywrap(){}
+int maiin(int argc,char*argv[])
+{
+printf("enter the input:");
+extern FILE *yyin;
+yyin = fopen("testtest.c","r");
+yylex();
+return 0;
+}
